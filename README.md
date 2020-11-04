@@ -1,0 +1,2 @@
+# jest-typescript-allure
+Testing
