@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "lib": ["es2019", "es2020"],
+    "types": ["jest", "node"],
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "build",
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "paths": {
+      "framework/*": ["src/framework/*"],
+      "generated/*": ["src-gen/*"],
+      "tests/*": ["tests/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "alwaysShowRuleFailuresAsWarnings": false,
+        "ignoreDefinitionFiles": true,
+        "configFile": "tslint.json",
+        "suppressWhileTypeErrorsPresent": false
+      }
+    ]
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules"]
+}
